@@ -213,6 +213,10 @@
     <Compile Include="Migrations\201803190028327_Upd-RestaurantReviewsTbl-Added-ReviewerName.Designer.cs">
       <DependentUpon>201803190028327_Upd-RestaurantReviewsTbl-Added-ReviewerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803191238035_RestaurantReview-Validation.cs" />
+    <Compile Include="Migrations\201803191238035_RestaurantReview-Validation.Designer.cs">
+      <DependentUpon>201803191238035_RestaurantReview-Validation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AboutModel.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -311,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803190028327_Upd-RestaurantReviewsTbl-Added-ReviewerName.resx">
       <DependentUpon>201803190028327_Upd-RestaurantReviewsTbl-Added-ReviewerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803191238035_RestaurantReview-Validation.resx">
+      <DependentUpon>201803191238035_RestaurantReview-Validation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

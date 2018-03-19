@@ -48,7 +48,7 @@ namespace OdeToFood.Controllers
 
         // Called when Save is clicked inside Edit Restaurant Review
         [HttpPost]
-        public ActionResult Edit([Bind(Exclude = "ReviewerName")] RestaurantReview review)
+        public ActionResult Edit(RestaurantReview review)
         {
             if (ModelState.IsValid)
             {
