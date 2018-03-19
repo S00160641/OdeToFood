@@ -11,19 +11,21 @@
     <h2>@ViewBag.message</h2>
 </div> -->
 
-<form method="get">
+@*<form method="get">
     <input type="search" name="searchTerm" />
     <input type="submit" value="Search By Name"/>
-</form>
+</form>*@
 
-@foreach (var restaurant in Model)
+@using (Ajax.BeginForm( // Asynchronous Request to Server, Redraws a Portion of the Screen
+                new AjaxOptions
+                {
+                    HttpMethod = "get",
+                    InsertionMode = InsertionMode.Replace,
+                    UpdateTargetId = "restaurantList" // Element Id to redraw
+                }))
 {
-    <div>
-        <h4>@restaurant.Name</h4>
-        <div>@restaurant.City, @restaurant.Country</div>
-        <div>
-            Reviews: @restaurant.CountOfReviews
-        </div>
-        <hr/>
-    </div>
+    <input type="search" name="searchTerm" />
+    <input type="submit" value="Search By Name" />
 }
+
+@Html.Partial("_Restaurants", Model)

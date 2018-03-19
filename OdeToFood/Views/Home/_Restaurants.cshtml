@@ -1,0 +1,15 @@
+﻿@model IEnumerable<OdeToFood.Models.RestaurantListViewModel>
+
+<div id="restaurantList">
+    @foreach (var restaurant in Model)
+    {
+        <div>
+            <h4>@restaurant.Name</h4>
+            <div>@restaurant.City, @restaurant.Country</div>
+            <div>
+                Reviews: @restaurant.CountOfReviews
+            </div>
+            <hr />
+        </div>
+    }
+</div>

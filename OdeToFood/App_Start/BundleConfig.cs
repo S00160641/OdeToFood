@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace OdeToFood
 {
@@ -8,6 +7,12 @@ namespace OdeToFood
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            // Installed jquery-ui from nuget
+            bundles.Add(new ScriptBundle("~/bundles/otf").Include(
+                "~/Scripts/jquery-{version}.js",
+                "~/Scripts/jquery-ui-{version}.js",
+                "~/Scripts/jquery.validate.unobtrusive"));
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
