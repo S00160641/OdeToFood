@@ -1,27 +1,13 @@
-﻿@model IEnumerable<OdeToFood.Models.RestaurantReview>
+﻿@model OdeToFood.Models.Restaurant
 
 @{
     ViewBag.Title = "Index";
-    var firstReview = Model.First();
 }
 
-<h2>The Latest Reviews</h2>
-<h3>We are showing the latest @Model.Count() reviews</h3>
-<p>First review: @firstReview.Name</p>
+<h2>Reviews for @Model.Name</h2>
+
+@Html.Partial("_Reviews", Model.Reviews)
+
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-
-@foreach (var item in Model)
-{
-    // @Html.Partial("_Review", item)
-   <div class="review">
-        <h4>@item.Name</h4>
-        <span>@item.Rating</span>
-        <p>@item.City, @item.Country</p>
-
-        <span class="right">
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id })
-        </span>
-    </div>
-}

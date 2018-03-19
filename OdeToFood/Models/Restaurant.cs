@@ -8,6 +8,6 @@ namespace OdeToFood.Models
         public string Name { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
-        public ICollection<RestaurantReview> Reviews { get; set; } // A Restaurant has many Reviews
+        public virtual ICollection<RestaurantReview> Reviews { get; set; } // A Restaurant has many Reviews
     }
 }
