@@ -1,0 +1,6 @@
+Enable-Migrations -ContextTypeName OdeToFoodDb
+
+update-database -Verbose
+
+add-migration -ConfigurationTypeName OdeToFood.Migrations.Configuration
+
